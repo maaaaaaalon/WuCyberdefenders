@@ -1,0 +1,24 @@
+{
+
+    "manifest_version": 2,
+    "name": "Write-Up cyberdefenders",
+    "version": "1.0",
+
+    "description": "Generate markdown template for cyberdefenders write-up from current page when you browse https://cyberdefenders.org/",
+
+    "icons": {
+        "48": "icons/writeup.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "16": "icons/writeup.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://cyberdefenders.org/blueteam-ctf-challenges/*"],
+            "js": ["wucyberdefenders.js"]
+        }
+    ]
+
+}
