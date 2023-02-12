@@ -1,33 +1,30 @@
 function getElementByXPath(xpath) {
-  return new XPathEvaluator()
-    .createExpression(xpath)
-    .evaluate(document, XPathResult.FIRST_ORDERED_NODE_TYPE)
-    .singleNodeValue
+    return new XPathEvaluator()
+        .createExpression(xpath)
+        .evaluate(document, XPathResult.FIRST_ORDERED_NODE_TYPE)
+        .singleNodeValue
 }
 
 function download(content, filename){
-  const a = document.createElement('a') // Create "a" element
-  const blob = new Blob([content], {type: "text/markdown"}) // Create a blob (file-like object)
-  const url = URL.createObjectURL(blob) // Create an object URL from blob
-  a.setAttribute('href', url) // Set "a" element link
-  a.setAttribute('download', filename) // Set download filename
-  a.click() // Start downloading
+    const a = document.createElement('a') // Create "a" element
+    const url = URL.createObjectURL(blob) // Create an object URL from blob
+    /*a.setAttribute('href', url) // Set "a" element link
+    a.setAttribute('download', filename) // Set download filename
+    a.click() // Start downloading
+    */
+    return url
 }
 
 function onSuccess() {
-  console.log("Downloaded successfully");
+    console.log("Downloaded successfully");
 }
 
 function onError(error) {
     console.log(`Error: ${error}`);
 }
 
-console.log("borderify.js loaded");
-str= document.URL;
-matches = str.match(/\d+$/) // get the last two digits of the URL
-if (matches) {
-    console.log(matches[0])
-    document.body.style.border = "5px solid red";
+
+function retrieveData() {
     title = getElementByXPath("/html/body/main/section/div/div[1]/div/div/div[1]/span").innerText  // Title 
     rows = document.getElementsByTagName("table")[1].rows;
     size=rows.length-1
@@ -42,5 +39,18 @@ if (matches) {
         myFileString += "### "+ i + " - "+ questions[i] + "\n\n\n"
     }
     console.log(myFileString)
-    process = download(myFileString, title+".md")
+    return myFileString
 }
+
+
+function main(){
+    str= document.URL;
+    matches = str.match(/\d+$/) // get the last two digits of the URL
+    if (matches) {
+        return retrieveData()
+    }else{
+        return ""
+    }
+}
+
+main()
