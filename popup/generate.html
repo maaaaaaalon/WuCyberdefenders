@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="generate.css"/>
+    </head>
+
+    <body>
+        <div class="flexbox-container">
+            <h1 class="title">Generate WU-template</h1>
+            <p class="info">Enter filename below and generate a template for your current lab write-up.</p>
+            <div class="form-filename">
+                <label for="name" class="form-label">Filename : </label>
+                <input type="text" class="form-input" id="filename" name="filename" size="20" required>
+                <p>.md</p>
+            </div>
+            <p class= "error" id="error">Error: You are not in a CyberDefenders challenge page</p>
+            <button id="button">Generate</button>
+        </div>
+        <script src="generate.js"></script>
+    </body>
+
+</html>

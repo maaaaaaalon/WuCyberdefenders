@@ -12,12 +12,13 @@
     "browser_action": {
         "default_icon": {
             "16": "icons/writeup.png"
-        }
+        },
+        "default_popup": "popup/generate.html"
     },
+    "permissions": ["activeTab"],
     "content_scripts": [
         {
-            "matches": ["*://cyberdefenders.org/blueteam-ctf-challenges/*"],
-            "js": ["wucyberdefenders.js"]
+            "matches": ["*://cyberdefenders.org/blueteam-ctf-challenges/*"]
         }
     ]
 
