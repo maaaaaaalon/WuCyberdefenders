@@ -3,7 +3,7 @@ Firefox web extenstion to quickly generate a template for you cyberdefenders lab
 
 ### Use
 
-Go to a challenge page, and launch extension's pop up to fiel the file name and download it
+Go to a challenge page, and launch extension's pop up to fill the "filename" field and download the generated .md file
 
 <img src="https://github.com/maaaaaaalon/WuCyberdefenders/raw/main/sample/demo.png" style="zoom:23%;" />
 
