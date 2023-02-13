@@ -26,19 +26,23 @@ function onError(error) {
 
 function retrieveData() {
     title = getElementByXPath("/html/body/main/section/div/div[1]/div/div/div[1]/span").innerText  // Title 
+    tags= getElementByXPath("/html/body/main/section/div/div[1]/div/div/div[2]/div/table/tbody/tr[5]/td[2]")
+    console.log(tags)
     rows = document.getElementsByTagName("table")[1].rows;
     size=rows.length-1
     questions=[]
     for (var i = 1; i < size; i+=3) {
         questions.push(rows[i].cells[1].innerText)
     }
-    console.log("Title: "+title)
-    console.log(questions)
+    //console.log("Title: "+title)
+    //console.log(questions)
     myFileString= "# "+ title + "\n"
     for (var i = 0; i < questions.length; i++) {
-        myFileString += "### "+ i + " - "+ questions[i] + "\n\n\n"
+        j=i+1
+        myFileString += "### "+ j + " - "+ questions[i] + "\n\n"
+        myFileString += "**answer** : \n\n"
     }
-    console.log(myFileString)
+    //console.log(myFileString)
     return myFileString
 }
 

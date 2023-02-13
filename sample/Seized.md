@@ -1,28 +1,37 @@
 # Seized
-### 0 - What is the CentOS version installed on the machine?
+### 1 - What is the CentOS version installed on the machine?
 
+**answer** : 
 
-### 1 - There is a command containing a strange message in the bash history. Will you be able to read it?
+### 2 - There is a command containing a strange message in the bash history. Will you be able to read it?
 
+**answer** : 
 
-### 2 - What is the PID of the suspicious process?
+### 3 - What is the PID of the suspicious process?
 
+**answer** : 
 
-### 3 - The attacker downloaded a backdoor to gain persistence. What is the hidden message in this backdoor?
+### 4 - The attacker downloaded a backdoor to gain persistence. What is the hidden message in this backdoor?
 
+**answer** : 
 
-### 4 - What are the attacker's IP address and the local port on the targeted machine?
+### 5 - What are the attacker's IP address and the local port on the targeted machine?
 
+**answer** : 
 
-### 5 - What is the first command that the attacker executed?
+### 6 - What is the first command that the attacker executed?
 
+**answer** : 
 
-### 6 - After changing the user password, we found that the attacker still has access. Can you find out how?
+### 7 - After changing the user password, we found that the attacker still has access. Can you find out how?
 
+**answer** : 
 
-### 7 - What is the name of the rootkit that the attacker used?
+### 8 - What is the name of the rootkit that the attacker used?
 
+**answer** : 
 
-### 8 - The rootkit uses crc65 encryption. What is the key?
+### 9 - The rootkit uses crc65 encryption. What is the key?
 
+**answer** : 
 
